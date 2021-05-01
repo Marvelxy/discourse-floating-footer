@@ -3,11 +3,11 @@
   <div class="flexbox">
     {{#each mainHeading as |section|}}
     <div class="title">
-      {{section.text}}
+      <a href="{{section.link}}">{{section.text}}</a>
     </div>
     {{/each}}
   </div>
-
+  {{!--
   <div class="flexbox">
     <div class="first-box">
       <div class="heading">
@@ -52,5 +52,6 @@
       </div>
     </div>
   </div>
+  --}}
 </div>
 {{/if}}
