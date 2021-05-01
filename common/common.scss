@@ -1,10 +1,18 @@
 .custom-footer {
-  display: flex;
+  //display: flex;
   flex-wrap: wrap;
-  background: var(--primary);
+  background: var(--secondary);
+  // border: solid 1px black;
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // height: 50px;
+  box-shadow: 0px -1px 2px gray;
   .title {
-    width: 33%;
-    border: 1px solid red;
+    width: 15%;
+    // border: 1px solid red;
+    // flex: 1;
     /*.heading {
       font-size: $font-up-2;
       font-weight: bold;
@@ -14,15 +22,18 @@
     .blurb {
       color: var(--secondary-high);
     }*/
-    color: var(--secondary);
+    color: var(--primary);
     text-align: center;
+    font-size: 1.3rem;
   }
   .flexbox {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     color: var(--secondary);
-    padding: 2em 0 1em 0;
+    // padding: 2em 0 1em 0;
+    padding: 1em 0 1em 0;
+    justify-content: center;
   }
   .first-box {
     max-width: 20%;

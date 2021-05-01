@@ -89,19 +89,22 @@ export default {
       });
 
       let mainHeading = {};
-      if(Discourse.User.current()){
+
+      let loggedIn = Discourse.User.current();
+      if(loggedIn){
         // let mainHeading = window.location.pathname + 'pop';
+        const userName = loggedIn.username
         mainHeading = [
-          {title: 'Latest', text: 'Latest'},
-          {title: 'Stats', text: 'Stats'},
-          {title: 'Calendar', text: 'Calendar'}
+          {title: 'Latest', text: 'Latest', link: 'https://publichappinessmovement.com/latest'},
+          {title: 'Stats', text: 'Stats', link: `https://publichappinessmovement.com/u/${userName}/summary`},
+          {title: 'Calendar', text: 'Calendar', link: `https://website/${userName}/c/events/l/agenda`}
         ]
       }
       else{
         mainHeading = [
-          {title: 'About', text: 'About'},
-          {title: 'Join', text: 'Join'},
-          {title: 'Community Values', text: 'Community Values'}
+          {title: 'About', text: 'About', link: 'https://publichappinessmovement.com/docuss/m_about'},
+          {title: 'Join', text: 'Join', link: '#'},
+          {title: 'Community Values', text: 'Community Values', link: 'https://news.focallocal.org/the-focallocal-community-values/'}
         ]
       }
 
