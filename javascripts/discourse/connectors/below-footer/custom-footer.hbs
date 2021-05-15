@@ -1,11 +1,14 @@
 {{#if showFooter}}
 <div class="wrap">
   <div class="flexbox">
-    {{#each mainHeading as |section|}}
-    <div class="title">
-      <a href="{{section.link}}">{{section.text}}</a>
-    </div>
-    {{/each}}
+    {{mount-widget widget="floating-footer-hamburger"}}
+    <div class="" style="display: flex; width: 70%; justify-content: left; border: 1px solid white;">
+      {{#each mainHeading as |section|}}
+      <div class="title">
+        <a href="{{section.link}}">{{section.text}}</a>
+      </div>
+      {{/each}}
+      </div>
   </div>
   {{!--
   <div class="flexbox">
