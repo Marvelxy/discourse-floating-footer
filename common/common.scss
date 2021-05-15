@@ -8,7 +8,8 @@
   left: 0;
   right: 0;
   // height: 50px;
-  box-shadow: 0px -1px 2px gray;
+  // box-shadow: 0px -1px 2px gray;
+  box-shadow: 0px -2px 4px rgb(209, 206, 206);
   .title {
     width: 15%;
     // border: 1px solid red;
@@ -32,8 +33,10 @@
     flex-wrap: wrap;
     color: var(--secondary);
     // padding: 2em 0 1em 0;
-    padding: 1em 0 1em 0;
-    justify-content: center;
+    padding: 0.3em 0 0.3em 0;
+    // justify-content: center;
+    justify-content: space-between;
+    align-items: center;
   }
   .first-box {
     max-width: 20%;
