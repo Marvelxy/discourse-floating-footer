@@ -6,6 +6,17 @@ const getClassName = text => {
 export default {
   setupComponent(args, component) {
     try {
+      component.set('actions', {})
+      component.set('actions.myAction', () => { 
+        alert('my action triggered') 
+      });
+      component.set('actions.createAccount', () => {
+        // alert('llll');
+        // this.send("showCreateAccount");
+        this.appEvents.trigger('showCreateAccount');
+        // this.showCreateAccount();
+      });
+
       const splitLinkSections = settings.Link_sections.split("|").filter(Boolean);
       const splitLinks = settings.Links.split("|").filter(Boolean);
       const splitSmallLinks = settings.Small_links.split("|").filter(Boolean);
@@ -103,8 +114,8 @@ export default {
       else{
         mainHeading = [
           {title: 'About', text: 'About', link: 'https://publichappinessmovement.com/docuss/m_about'},
-          {title: 'Join', text: 'Join', link: '#'},
-          {title: 'Community Values', text: 'Community Values', link: 'https://news.focallocal.org/the-focallocal-community-values/'}
+          {title: 'Join', text: 'Join', join: true, link: '#'},
+          {title: 'CommunityValues', text: 'Community Values', link: 'https://news.focallocal.org/the-focallocal-community-values/'}
         ]
       }
 

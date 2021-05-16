@@ -1,14 +1,18 @@
 {{#if showFooter}}
 <div class="wrap">
   <div class="flexbox">
-    {{mount-widget widget="floating-footer-hamburger"}}
-    <div class="" style="display: flex; width: 70%; justify-content: left; border: 1px solid white;">
+    <div class="footer-inner-links">
+      {{mount-widget widget="floating-footer-hamburger"}}
       {{#each mainHeading as |section|}}
-      <div class="title">
-        <a href="{{section.link}}">{{section.text}}</a>
-      </div>
+        {{#if section.join}}
+        {{d-button action=(route-action 'showCreateAccount') class='btn-primary btn-large sign-up-button' label='sign_up'}}
+        {{else}}
+          <div class="title">
+            <a href="{{section.link}}" {{ action "myAction" }}>{{section.text}}</a>
+            </div>
+        {{/if}}
       {{/each}}
-      </div>
+    </div>
   </div>
   {{!--
   <div class="flexbox">

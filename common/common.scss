@@ -10,8 +10,15 @@
   // height: 50px;
   // box-shadow: 0px -1px 2px gray;
   box-shadow: 0px -2px 4px rgb(209, 206, 206);
+  .footer-inner-links {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    // border: 1px solid red;
+    align-items: center;
+  }
   .title {
-    width: 15%;
+    // width: 100%;
     // border: 1px solid red;
     // flex: 1;
     /*.heading {
@@ -35,7 +42,7 @@
     // padding: 2em 0 1em 0;
     padding: 0.3em 0 0.3em 0;
     // justify-content: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   .first-box {
