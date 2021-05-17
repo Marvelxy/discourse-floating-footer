@@ -107,8 +107,8 @@ export default {
         const userName = loggedIn.username
         mainHeading = [
           {title: 'Latest', text: 'Latest', link: 'https://publichappinessmovement.com/latest'},
-          {title: 'Stats', text: 'Stats', link: `https://publichappinessmovement.com/u/${userName}/summary`},
-          {title: 'Calendar', text: 'Calendar', link: `https://website/${userName}/c/events/l/agenda`}
+          {title: 'Stats', text: 'My Stats', link: `https://publichappinessmovement.com/u/${userName}/summary`},
+          {title: 'Calendar', text: 'Calendar', link: `https://website.com/${userName}/c/events/l/agenda`}
         ]
       }
       else{
