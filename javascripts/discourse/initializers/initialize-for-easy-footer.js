@@ -12,8 +12,13 @@ export default {
             this.set("application.showFooter", true);
           }
         });
+
+        //api.onPageChange(() => {
+          //showFooterOnStatic() {
+            // this.set("application.showFooter", true);
+          //}
+        //});
       }
     });
-    
   }
 };

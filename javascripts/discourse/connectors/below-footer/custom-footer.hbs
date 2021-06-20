@@ -8,8 +8,9 @@
         {{d-button action=(route-action 'showCreateAccount') class='btn-primary btn-large sign-up-button' label='sign_up'}}
         {{else}}
           <div class="title">
-            <a href="{{section.link}}" {{ action "myAction" }}>{{section.text}}</a>
-            </div>
+            {{!--<a href="{{section.link}}" {{ action "myAction" }}>{{section.text}}</a>--}}
+            <a href="{{section.link}}">{{section.text}}</a>
+          </div>
         {{/if}}
       {{/each}}
     </div>
