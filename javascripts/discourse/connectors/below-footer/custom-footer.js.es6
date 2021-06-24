@@ -29,6 +29,10 @@ export default {
             this.appEvents.trigger('showCreateAccount');
           });
 
+          component.set('actions.openSideBar', () => {
+            this.appEvents.trigger('sidebar:toggle', {side: 'left'});
+          });
+
           const splitLinkSections = settings.Link_sections.split("|").filter(Boolean);
           const splitLinks = settings.Links.split("|").filter(Boolean);
           const splitSmallLinks = settings.Small_links.split("|").filter(Boolean);

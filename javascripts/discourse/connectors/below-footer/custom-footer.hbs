@@ -2,7 +2,12 @@
 <div class="wrap">
   <div class="flexbox">
     <div class="footer-inner-links">
-      {{mount-widget widget="floating-footer-hamburger"}}
+      <!-- Hamburger menu for thepavilion -->
+      <button id="tog" class="responsive-toggle left btn no-text ember-view" type="button" {{ action "openSideBar" }}>
+        <img src="https://thepavilion.io/uploads/default/original/2X/d/d76070707333dee1c248c0f47e3fb0e2329404ec.png"
+        class="image-icon">
+      </button>
+
       {{#each mainHeading as |section|}}
         {{#if section.join}}
         {{d-button action=(route-action 'showCreateAccount') class='btn-primary btn-large sign-up-button' label='sign_up'}}
