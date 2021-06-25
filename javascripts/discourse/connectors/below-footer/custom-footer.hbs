@@ -3,10 +3,10 @@
   <div class="flexbox">
     <div class="footer-inner-links">
       <!-- Hamburger menu for thepavilion -->
-      <button id="tog" class="responsive-toggle left btn no-text ember-view" type="button" {{ action "openSideBar" }}>
+      <a id="tog" class="responsive-toggle left btn no-text ember-view" type="button" {{ action "openSideBar" }}>
         <img src="https://thepavilion.io/uploads/default/original/2X/d/d76070707333dee1c248c0f47e3fb0e2329404ec.png"
         class="image-icon">
-      </button>
+      </a>
 
       {{#each mainHeading as |section|}}
         {{#if section.join}}
