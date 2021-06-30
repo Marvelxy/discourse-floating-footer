@@ -255,6 +255,25 @@ export default {
                     {title: 'Tasks', text: 'Tasks', link: '' /*`/tag/${newSplittedURL[0].split('/')[2]}/l/latest`*/}
                   ];
                 }
+                else if(newSplittedURL[0].split('/')[1] === 'c' || newSplittedURL[0].split('/')[1] === 't'){
+                  // This handles calendar navigation
+                  const calenderSplittedURL = newSplittedURL[0].split('/');
+                  if(calenderSplittedURL.includes('calendar')){
+                    calenderSplittedURL.splice(-2, 2);
+                    mainHeading = [
+                      {title: 'Latest', text: 'Latest', link: '/latest'},
+                      {title: 'Stats', text: 'My Stats', link: `/u/${userName}/summary`},
+                      {title: 'Back', text: 'Back', link: `${calenderSplittedURL.join('/')}`}
+                    ];
+                  }
+                  else{
+                    mainHeading = [
+                      {title: 'Latest', text: 'Latest', link: '/latest'},
+                      {title: 'Stats', text: 'My Stats', link: `/u/${userName}/summary`},
+                      {title: 'Calendar', text: 'Calendar', link: `${newSplittedURL}/l/calendar`}
+                    ];
+                  }
+                }
                 else{
                   mainHeading = [
                     {title: 'Latest', text: 'Latest', link: '/latest'},
