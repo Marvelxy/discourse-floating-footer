@@ -261,22 +261,39 @@ export default {
                   if(calenderSplittedURL.includes('calendar')){
                     calenderSplittedURL.splice(-2, 2);
                     mainHeading = [
-                      {title: 'Latest', text: 'Latest', link: '/latest'},
-                      {title: 'Stats', text: 'My Stats', link: `/u/${userName}/summary`},
-                      {title: 'Back', text: 'Back', link: `${calenderSplittedURL.join('/')}`}
+                      {title: 'Latest', text: 'Latest', link: `${calenderSplittedURL.join('/')}/l/latest`},
+                      {title: 'Stats', text: 'Stats', link: ``},
+                      // {title: 'Back', text: 'Back', link: `${calenderSplittedURL.join('/')}`}
                     ];
                   }
                   else{
-                    mainHeading = [
-                      {title: 'Latest', text: 'Latest', link: '/latest'},
+                    // const latestSplittedURL = newSplittedURL[0].split('/');
+                    if(calenderSplittedURL.includes('latest')){
+                      calenderSplittedURL.splice(-2, 2);
+                      mainHeading = [
+                        //{title: 'Back', text: 'Back', link: `${calenderSplittedURL.join('/')}`},
+                        {title: 'Stats', text: 'Stats', link: ``},
+                        {title: 'Calender', text: 'Calendar', link: `${calenderSplittedURL.join('/')}/l/calendar`}
+                      ];
+                    }
+                    else{
+                      mainHeading = [
+                        {title: 'Latest', text: 'Latest', link: `${newSplittedURL}/l/latest`},
+                        {title: 'Stats', text: 'Stats', link: ``},
+                        {title: 'Calendar', text: 'Calendar', link: `${newSplittedURL}/l/calendar`}
+                      ];
+                    }
+
+                    /*mainHeading = [
+                      {title: 'Latest', text: 'Latest', link: `${newSplittedURL}/l/latest`},
                       {title: 'Stats', text: 'My Stats', link: `/u/${userName}/summary`},
                       {title: 'Calendar', text: 'Calendar', link: `${newSplittedURL}/l/calendar`}
-                    ];
+                    ];*/
                   }
                 }
                 else{
                   mainHeading = [
-                    {title: 'Latest', text: 'Latest', link: '/latest'},
+                    {title: 'Latest', text: 'Latest', link: `${newSplittedURL}/l/latest`},
                     {title: 'Stats', text: 'My Stats', link: `/u/${userName}/summary`},
                     {title: 'Calendar', text: 'Calendar', link: `/${userName}/c/events/l/agenda`}
                   ];
